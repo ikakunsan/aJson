@@ -189,9 +189,9 @@ public:
 	void deleteItem(aJsonObject *c);
 
 	// Returns the number of items in an array (or object).
-	unsigned char getArraySize(aJsonObject *array);
+	int getArraySize(aJsonObject *array);
 	// Retrieve item number "item" from array "array". Returns NULL if unsuccessful.
-	aJsonObject* getArrayItem(aJsonObject *array, unsigned char item);
+	aJsonObject* getArrayItem(aJsonObject *array, int item);
 	// Get item "string" from object. Case insensitive.
 	aJsonObject* getObjectItem(aJsonObject *object, const char *string);
 

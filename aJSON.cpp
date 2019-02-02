@@ -922,17 +922,17 @@ aJsonStream::printObject(aJsonObject *item)
 }
 
 // Get Array size/item / object item.
-unsigned char
+int
 aJsonClass::getArraySize(aJsonObject *array)
 {
   aJsonObject *c = array->child;
-  unsigned char i = 0;
+  int i = 0;
   while (c)
     i++, c = c->next;
   return i;
 }
 aJsonObject*
-aJsonClass::getArrayItem(aJsonObject *array, unsigned char item)
+aJsonClass::getArrayItem(aJsonObject *array, int item)
 {
   aJsonObject *c = array->child;
   while (c && item > 0)
